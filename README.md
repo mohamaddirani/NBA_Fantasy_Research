@@ -20,6 +20,9 @@ The objective of this project is to assess NBA player data to calculate fantasy 
 ### Data
 - **Dataset**: The primary dataset is sourced from FantasyPros, containing player statistics projections for the 2019 NBA season.
 
+### RQ&Variables
+- **ResearchQuestionandVariables**: The research question that the research will answer on and the Dependent and Independent variables that will be analyzed to visualize the corelation.
+
 ### Installation
 1. Clone this repository:
    ```bash
@@ -38,6 +41,8 @@ The objective of this project is to assess NBA player data to calculate fantasy 
 NBA_Fantasy_Research/
 ├── data/
 │   └── DataSet.csv
+├── RQ&Variables/
+│   └── reseach_question_presentation_template.pptx
 └── README.md
 ```
 
