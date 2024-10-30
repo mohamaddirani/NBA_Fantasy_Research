@@ -8,11 +8,12 @@ This project explores NBA player performance to calculate projected fantasy poin
 ### Table of Contents
 1. [Background](#background)
 2. [Data](#data)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Project Structure](#project-structure)
-6. [Contributing](#contributing)
-7. [License](#license)
+3. [RQ&Variables](#researcha-question-and-variables)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Project Structure](#project-structure)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ### Background
 The objective of this project is to assess NBA player data to calculate fantasy points and examine trends in player performance. Calculations include key metrics like points, rebounds, assists, blocks, and turnovers, adjusted per ESPN’s scoring system to predict fantasy performance.
