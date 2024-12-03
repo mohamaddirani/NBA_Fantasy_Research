@@ -20,18 +20,42 @@ summary_stats_clean <- data %>%
             count = n())
 print(summary_stats_clean)
 
-# Step 4: Perform ANOVA test
-anova_result_clean <- aov(PTS ~ Primary_Position, data = data)
-summary(anova_result_clean)
+# Step 4: Perform a Spearman correlation test between Assists (AST) and Points Scored (PTS)
+cor_test <- cor.test(data$AST, data$PTS, method = "spearman", exact = FALSE)
 
-# Step 5: Post-hoc analysis with Tukey's HSD test
-tukey_result_clean <- TukeyHSD(anova_result_clean)
-print(tukey_result_clean)
+# Print the results of the correlation test
+print(cor_test)
 
-# Step 6: Create a boxplot for points by primary position (cleaned data)
-ggplot(data, aes(x = Primary_Position, y = PTS)) +
-  geom_boxplot() +
-  labs(title = "Points Scored by Position (Cleaned Data)",
-       x = "Primary Position",
-       y = "Points (PTS)") +
+# Extract test statistic and p-value
+test_statistic <- cor_test$statistic
+p_value <- cor_test$p.value
+
+# Step 5: Create a scatter plot with a linear trendline
+ggplot(data, aes(x = AST, y = PTS)) +
+  geom_point(color = "blue", alpha = 0.6) +  # Points for visualization
+  geom_smooth(method = "lm", color = "red", se = FALSE) +  # Add trendline (linear regression)
+  labs(
+    title = "Relationship Between Assists (AST) and Points Scored (PTS)",
+    x = "Assists (AST)",
+    y = "Points Scored (PTS)"
+  ) +
   theme_minimal()
+
+# Step 6: Create a histogram of Points Scored (PTS) with a bell curve overlay
+ggplot(data, aes(x = PTS)) +
+  geom_histogram(aes(y = after_stat(density)), 
+                 binwidth = 50, fill = "blue", color = "black", alpha = 0.7) +
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(data$PTS, na.rm = TRUE), 
+                            sd = sd(data$PTS, na.rm = TRUE)), 
+                color = "red", linewidth = 1) +
+  labs(
+    title = "Histogram of Points Scored (PTS) with Normal Curve Overlay",
+    x = "Points Scored (PTS)",
+    y = "Density"
+  ) +
+  theme_minimal()
+
+# Output test statistic and p-value for reporting
+cat("Test Statistic:", test_statistic, "\n")
+cat("P-value:", p_value, "\n")
