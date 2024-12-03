@@ -38,10 +38,22 @@ The objective of this project is to assess NBA player data to calculate fantasy 
 ### Project Structure
 ```
 NBA_Fantasy_Research/
-├── data/
+├── DataSet/
 │   └── DataSet.csv
-├── RQ&Variables/
-│   └── reseach_question_presentation_template.pptx
+├── DataVisualization/
+│   └── CorrelationAnalysis.PNG
+│   └── Normal_Curve_Histogram.PNG
+│   └── Scatter_Plot_with_Linear_TrendLine.PNG
+├── Presentations/
+│   └── reseach_question_presentation.pptx
+│   └── vis_and_analysis_student.pptx
+├── Rstudio/
+│   └── data
+│   │   └── DataSet.csv
+│   └── .RData
+│   └── .Rhistory
+│   └── NBA_Fantasy_Research.Rproj
+│   └── Rcode.R
 └── README.md
 ```
 
