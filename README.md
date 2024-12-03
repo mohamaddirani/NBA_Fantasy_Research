@@ -45,11 +45,11 @@ NBA_Fantasy_Research/
 │   └── Normal_Curve_Histogram.PNG
 │   └── Scatter_Plot_with_Linear_TrendLine.PNG
 ├── Presentations/
-│   └── reseach_question_presentation.pptx
+│   └── research_question_presentation.pptx
 │   └── vis_and_analysis_student.pptx
 ├── Rstudio/
-│   └── data
-│   │   └── DataSet.csv
+│   └── data/
+│       └── DataSet.csv
 │   └── .RData
 │   └── .Rhistory
 │   └── NBA_Fantasy_Research.Rproj
