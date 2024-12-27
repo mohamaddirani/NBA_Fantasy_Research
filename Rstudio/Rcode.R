@@ -59,3 +59,4 @@ ggplot(data, aes(x = PTS)) +
 # Output test statistic and p-value for reporting
 cat("Test Statistic:", test_statistic, "\n")
 cat("P-value:", p_value, "\n")
+
