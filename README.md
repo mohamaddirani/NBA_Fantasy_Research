@@ -1,6 +1,6 @@
 ---
 
-# NBA Fantasy Points Analysis
+# NBA Fantasy Points Analysis Documentation
 
 ### Project Overview
 This project explores NBA player performance to calculate projected fantasy points for the season. Using ESPN's standard fantasy scoring format, we analyze player statistics and generate insights that could help optimize player selections in fantasy leagues.
