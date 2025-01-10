@@ -1,4 +1,6 @@
 # Load necessary packages
+# dplyr for data manipulation.
+# ggplot2 for creating informative and attractive visualizations.
 library(dplyr)
 library(ggplot2)
 
