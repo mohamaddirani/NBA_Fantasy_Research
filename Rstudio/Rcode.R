@@ -5,6 +5,7 @@ library(dplyr)
 library(ggplot2)
 
 # Load the dataset
+# Load the dataset from a CSV file located within the 'data' directory.
 data <- read.csv("data/DataSet.csv")
 
 # Step 1: Create a Primary_Position column by extracting the first listed position
