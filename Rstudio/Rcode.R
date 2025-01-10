@@ -46,7 +46,8 @@ ggplot(data, aes(x = AST, y = PTS)) +
   ) +
   theme_minimal()
 
-# Step 6: Create a histogram of Points Scored (PTS) with a bell curve overlay
+# Step 6: Generate a histogram for Points Scored (PTS) with a bell curve overlay.
+# The overlay represents the normal distribution fit to the histogram, illustrating the distribution's shape.
 ggplot(data, aes(x = PTS)) +
   geom_histogram(aes(y = after_stat(density)), 
                  binwidth = 50, fill = "blue", color = "black", alpha = 0.7) +
