@@ -62,6 +62,8 @@ ggplot(data, aes(x = PTS)) +
   theme_minimal()
 
 # Output test statistic and p-value for reporting
+# Output the test statistic and p-value from the correlation test to help interpret the significance of the findings.
+
 cat("Test Statistic:", test_statistic, "\n")
 cat("P-value:", p_value, "\n")
 
