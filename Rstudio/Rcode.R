@@ -8,7 +8,9 @@ library(ggplot2)
 # Load the dataset from a CSV file located within the 'data' directory.
 data <- read.csv("data/DataSet.csv")
 
-# Step 1: Create a Primary_Position column by extracting the first listed position
+# Steps: Create a Primary_Position column by extracting the first listed position
+# Step 1: Extract the primary position from the 'Positions' column.
+# This is the first listed position in the comma-separated values.
 data <- data %>%
   mutate(Primary_Position = sapply(strsplit(as.character(Positions), ","), `[`, 1))
 
